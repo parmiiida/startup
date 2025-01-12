@@ -25,10 +25,10 @@ const Navbar = async () => {
 
                             await signOut({redirectTo : '/'})
                         }}>
-                            <span>LogOut</span>
+                            <button type="submit">LogOut</button>
                         </form>
 
-                        <Link href={`/user/${session?.id}`}>
+                        <Link href={`/user/${session?.user?.id}`}>
                              <span>{session?.user?.name}</span>
                         </Link>
                     </>
